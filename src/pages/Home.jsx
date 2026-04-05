@@ -30,89 +30,89 @@ export default function Home() {
     {
       id: 'kiosco',
       name: 'Kiosco Principal',
-      mainImage: '/public/media/images/kiosco all image.jpeg',
+      mainImage: '/media/images/kiosco all image.jpeg',
       description: 'El corazón de Casa Sanué',
       images: [
-        { src: '/public/media/images/kiosco all image.jpeg', title: 'Vista completa del Kiosco' },
-        { src: '/public/media/images/img1.jpeg', title: 'Kiosco Primer Nivel' },
-        { src: '/public/media/images/billar.jpeg', title: 'Sala de billar' },
-        { src: '/public/media/images/kiostop.jpeg', title: 'Kiosco Segundo Nivel' },
-        { src: '/public/media/images/kiostop2.jpeg', title: 'Kiosco Segundo Nivel Vista' },
-        { src: '/public/media/images/kiostop3.jpeg', title: 'Kiosco Segundo Nivel Vista' }
+        { src: '/media/images/kiosco all image.jpeg', title: 'Vista completa del Kiosco' },
+        { src: '/media/images/img1.jpeg', title: 'Kiosco Primer Nivel' },
+        { src: '/media/images/billar.jpeg', title: 'Sala de billar' },
+        { src: '/media/images/kiostop.jpeg', title: 'Kiosco Segundo Nivel' },
+        { src: '/media/images/kiostop2.jpeg', title: 'Kiosco Segundo Nivel Vista' },
+        { src: '/media/images/kiostop3.jpeg', title: 'Kiosco Segundo Nivel Vista' }
       ]
     },
     {
       id: 'cocina',
       name: 'Cocina & Comedor',
-      mainImage: '/public/media/images/img2.jpeg',
+      mainImage: '/media/images/img2.jpeg',
       description: 'Espacios culinarios elegantes',
       images: [
-        { src: '/public/media/images/cocina.jpeg', title: 'Cocina vista general' },
-        { src: '/public/media/images/img2.jpeg', title: 'Comedor principal' },
-        { src: '/public/media/images/img3.jpeg', title: 'Comedor elegante' },
-        { src: '/public/media/images/angulo.jpg', title: 'Vistas' },
+        { src: '/media/images/cocina.jpeg', title: 'Cocina vista general' },
+        { src: '/media/images/img2.jpeg', title: 'Comedor principal' },
+        { src: '/media/images/img3.jpeg', title: 'Comedor elegante' },
+        { src: '/media/images/angulo.jpg', title: 'Vistas' },
       ]
     },
     {
       id: 'exteriores',
       name: 'Zonas Exteriores',
-      mainImage: '/public/media/images/patio.jpg',
+      mainImage: '/media/images/patio.jpg',
       description: 'Otras Areas',
       images: [
-        { src: '/public/media/images/portada.jpeg', title: 'Entrada principal' },
-        { src: '/public/media/images/patio.jpg', title: 'Patio trasero' },
-        { src: '/public/media/images/jardin.jpg', title: 'Jardin exterior' },
-        { src: '/public/media/images/parking.jpg', title: 'Parqueadero con techo absorbente de sol' }
+        { src: '/media/images/portada.jpeg', title: 'Entrada principal' },
+        { src: '/media/images/patio.jpg', title: 'Patio trasero' },
+        { src: '/media/images/jardin.jpg', title: 'Jardin exterior' },
+        { src: '/media/images/parking.jpg', title: 'Parqueadero con techo absorbente de sol' }
       ]
     },
     {
       id: 'entretenimiento',
       name: 'Entretenimiento',
-      mainImage: '/public/media/images/barbbq.jpg',
+      mainImage: '/media/images/barbbq.jpg',
       description: 'Diversión y recreación',
       images: [
-        { src: '/public/media/images/img4.jpeg', title: 'Zona BBQ' },
-        { src: '/public/media/images/img5.jpeg', title: 'Bar y zona social' },
-        { src: '/public/media/images/barbbq.jpg', title: 'Bar y BBQ vista externa' },
-        { src: '/public/media/images/billar.jpeg', title: 'Sala de billar' },
-        { src: '/public/media/images/pisicna.jpeg', title: 'Piscina' },
-        { src: '/public/media/images/barangul.jpg', title: 'Punto de vista del Bar' }
+        { src: '/media/images/img4.jpeg', title: 'Zona BBQ' },
+        { src: '/media/images/img5.jpeg', title: 'Bar y zona social' },
+        { src: '/media/images/barbbq.jpg', title: 'Bar y BBQ vista externa' },
+        { src: '/media/images/billar.jpeg', title: 'Sala de billar' },
+        { src: '/media/images/pisicna.jpeg', title: 'Piscina' },
+        { src: '/media/images/barangul.jpg', title: 'Punto de vista del Bar' }
       ]
     },
     {
       id: 'living-room',
       name: 'Living Room',
-      mainImage: '/public/media/images/img6.jpeg',
+      mainImage: '/media/images/img6.jpeg',
       description: 'El corazón de Casa Sanué',
       images: [
-        { src: '/public/media/images/img6.jpeg', title: 'Sala de estar' },
-        { src: '/public/media/images/sala.jpg', title: 'Sala de estar vista general' }
+        { src: '/media/images/img6.jpeg', title: 'Sala de estar' },
+        { src: '/media/images/sala.jpg', title: 'Sala de estar vista general' }
       ]
     },
     {
       id: 'videos',
       name: 'Videos',
-      mainImage: '/public/media/images/portada.jpeg',
+      mainImage: '/media/images/portada.jpeg',
       description: 'Videos de Casa Sanué',
       images: [
-        { src: '/public/media/videos/general.mp4', title: 'Vista General' },
-        { src: '/public/media/videos/kios.mp4', title: 'Vista del kiosco' },
-        { src: '/public/media/videos/video.mp4', title: 'general' }
+        { src: '/media/videos/general.mp4', title: 'Vista General' },
+        { src: '/media/videos/kios.mp4', title: 'Vista del kiosco' },
+        { src: '/media/videos/video.mp4', title: 'general' }
       ]
     },
     {
       id: 'habitaciones',
       name: 'Habitaciones',
-      mainImage: '/public/media/images/camarotes.jpeg',
+      mainImage: '/media/images/camarotes.jpeg',
       description: 'Espacios de descanso y comodidad',
       images: [
-        { src: '/public/media/images/habita2.jpg', title: 'Habitación' },
-        { src: '/public/media/images/vcamarote.jpg', title: 'Habitación secundaria' },
-        { src: '/public/media/images/camarotes.jpeg', title: 'Camarotes' },
-        { src: '/public/media/images/vscamarote.jpg', title: 'Vista del camarote' },
-        { src: '/public/media/images/bath.jpg', title: 'Baño' },
-        { src: '/public/media/images/angbath.jpg', title: 'Vista del Baño' },
-        { src: '/public/media/images/puerta.jpeg', title: 'Puerta del baño' }
+        { src: '/media/images/habita2.jpg', title: 'Habitación' },
+        { src: '/media/images/vcamarote.jpg', title: 'Habitación secundaria' },
+        { src: '/media/images/camarotes.jpeg', title: 'Camarotes' },
+        { src: '/media/images/vscamarote.jpg', title: 'Vista del camarote' },
+        { src: '/media/images/bath.jpg', title: 'Baño' },
+        { src: '/media/images/angbath.jpg', title: 'Vista del Baño' },
+        { src: '/media/images/puerta.jpeg', title: 'Puerta del baño' }
       ]
     }
   ];
@@ -123,7 +123,7 @@ export default function Home() {
       <header>
         <div className="hero">
           <video autoPlay muted loop playsInline className="hero-video">
-            <source src="/public/media/videos/frontvideo.mp4" type="video/mp4" />
+            <source src="/media/videos/frontvideo.mp4" type="video/mp4" />
           </video>
 
           <div className="overlay"></div>
