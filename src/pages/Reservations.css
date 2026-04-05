@@ -2,7 +2,7 @@
 
 .res-bg {
   min-height: 100vh;
-  background-color: #30110a;
+  background-color: #050303;
 }
 
 /* ── Selección de planes ── */
@@ -35,19 +35,20 @@
 }
 
 .plan-card {
-  background: rgba(44, 28, 18, 0.85);
+  background: rgba(0, 0, 0, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 10px rgb(161, 129, 22);
   border-top: 3px solid var(--plan-color);
   border-radius: 16px;
   padding: 28px 24px;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .plan-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 40px rgb(253, 200, 54);
 }
 
 .plan-header {
@@ -73,12 +74,13 @@
 .plan-precio {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #F1F1F1;
+  color: #ffda60;
   margin: 0 0 6px;
 }
 
 .plan-descripcion {
-  color: rgba(241, 241, 241, 0.5);
+  text-shadow: 0 0 5px rgb(255, 225, 124);
+  color: rgb(255, 255, 255);
   font-size: 0.85rem;
   margin: 0;
 }
@@ -94,7 +96,7 @@
 .plan-seccion-label {
   font-size: 0.75rem;
   font-weight: 700;
-  color: rgba(241, 241, 241, 0.35);
+  color: rgb(255, 255, 255);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin: 6px 0 2px;
@@ -111,7 +113,7 @@
 
 .plan-lista li {
   font-size: 0.87rem;
-  color: rgba(241, 241, 241, 0.75);
+  color: rgb(255, 215, 86);
   padding-left: 12px;
   position: relative;
   line-height: 1.5;
@@ -124,8 +126,8 @@
   color: var(--plan-color);
 }
 
-.plan-lista-no li { color: rgba(241, 241, 241, 0.35); }
-.plan-lista-extras li { color: rgba(212, 175, 55, 0.65); }
+.plan-lista-no li { color: rgb(255, 255, 255); }
+.plan-lista-extras li { color: rgba(255, 255, 255, 0.993); }
 
 .plan-horario {
   display: flex;
@@ -199,12 +201,12 @@
 }
 
 .res-card {
-  background: rgba(44, 28, 18, 0.85);
-  border: 1px solid rgba(212, 175, 55, 0.15);
-  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgb(255, 212, 70);
   padding: 40px 36px;
   width: 100%;
   max-width: 540px;
+  box-shadow: 0 0 20px rgb(255, 212, 70);
 }
 
 .btn-volver {
@@ -433,4 +435,86 @@
   .res-row { flex-direction: column; }
   .res-card { padding: 28px 18px; }
   .planes-grid { grid-template-columns: 1fr; }
+}
+
+
+.Btn {
+  width: 140px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
+  background-size: 250%;
+  background-position: left;
+  color: #ffd277;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+}
+
+.Btn::before {
+  position: absolute;
+  content: "SELECCIONAR";
+  color: #ffd277;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.842);
+  background-size: 200%;
+}
+
+.Btn:hover {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn:hover::before {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn:active {
+  transform: scale(0.95);
+}
+
+/* ── Success Alert ── */
+.alert-success {
+  background: rgba(34, 197, 94, 0.1);
+  border: 2px solid rgba(34, 197, 94, 0.5);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.alert-success h3 {
+  color: #22c55e;
+  font-size: 1.25rem;
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.alert-success p {
+  color: rgba(241, 241, 241, 0.8);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.btn-terminos {
+  background: transparent;
+  border: none;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 25px rgb(255, 240, 107);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
 }

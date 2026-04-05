@@ -1,0 +1,386 @@
+/* Admin.css — Casa Sanué */
+
+.admin-bg {
+  min-height: 100vh;
+  background-color: #000000;
+}
+
+.admin-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.admin-titulo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #D4AF37;
+  margin: 0 0 4px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.admin-subtitulo {
+  color: rgba(241,241,241,0.65);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.btn-export {
+  background: transparent;
+  border: 1px solid rgba(212,175,55,0.4);
+  color: rgba(212,175,55,0.85);
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 180px;
+}
+
+.btn-export:hover:not(:disabled) {
+  background: rgba(212,175,55,0.08);
+  border-color: #D4AF37;
+  color: #D4AF37;
+}
+
+.btn-export:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Métricas */
+.metricas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.metrica-card {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255,255,255,0.07);
+  padding: 18px 16px;
+  border: #e6bb2e 1px solid;
+  box-shadow: #ffd95d 0px 0px 8px;
+}
+
+.metrica-label {
+  color: rgba(241,241,241,0.4);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 8px;
+}
+
+.metrica-valor {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #F1F1F1;
+  margin: 0;
+}
+
+.metrica-valor.dorado  { color: #D4AF37; }
+.metrica-valor.verde   { color: #1D9E75; }
+.metrica-valor.amarillo{ color: #BA7517; }
+.metrica-valor.rojo    { color: #a32d2d; }
+
+/* Gráficas */
+.graficas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.grafica-wrap {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255,255,255,0.07);
+  padding: 20px;
+  border: #e6bb2e 1px solid;
+  box-shadow: #ffd95d 0px 0px 8px;
+}
+
+.grafica-titulo {
+  color: rgba(241,241,241,0.5);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 16px;
+}
+
+.grafica-barras {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  height: 120px;
+}
+
+.barra-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  height: 100%;
+}
+
+.barra-track {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  background: rgba(255,255,255,0.04);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.barra-fill {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  transition: height 0.5s ease;
+  min-height: 4px;
+}
+
+.barra-label {
+  font-size: 0.7rem;
+  color: rgba(241,241,241,0.4);
+  text-align: center;
+}
+
+.barra-valor {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(241,241,241,0.7);
+}
+
+/* Filtros */
+.filtros-wrap {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filtro-input {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 8px;
+  padding: 9px 14px;
+  color: #F1F1F1;
+  font-size: 0.88rem;
+  outline: none;
+  flex: 1;
+  min-width: 160px;
+  color-scheme: dark;
+}
+
+.filtro-select {
+  background: rgba(0, 0, 0, 0.9);
+  border: #e6bb2e 1px solid;
+  box-shadow: #ffd95d 0px 0px 8px;
+  border-radius: 8px;
+  padding: 9px 12px;
+  color: #F1F1F1;
+  font-size: 0.88rem;
+  outline: none;
+  cursor: pointer;
+  color-scheme: dark;
+}
+
+.filtro-count {
+  color: rgba(241,241,241,0.35);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+/* Cards reservas */
+.tabla-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.reserva-card {
+  background: rgba(0, 0, 0, 0.7);
+  border: #e6bb2e 1px solid;
+  box-shadow: #ffd95d 0px 0px 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.reserva-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.reserva-info { display: flex; flex-direction: column; gap: 2px; }
+.reserva-plan { font-size: 0.95rem; font-weight: 700; color: #D4AF37; }
+.reserva-fecha { font-size: 0.82rem; color: rgba(241,241,241,0.45); }
+
+.reserva-estado {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.reserva-cliente {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.84rem;
+  color: rgba(241,241,241,0.6);
+  padding: 12px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+.reserva-pagos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.pago-item { display: flex; flex-direction: column; gap: 2px; }
+
+.pago-label {
+  font-size: 0.72rem;
+  color: rgba(241,241,241,0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pago-valor { font-size: 0.9rem; font-weight: 600; }
+.pago-valor.dorado { color: #D4AF37; }
+.pago-valor.verde  { color: #1D9E75; }
+.pago-valor.gris   { color: rgba(241,241,241,0.3); }
+
+.reserva-acciones {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.select-estado {
+  background: rgba(0, 0, 0, 0.973);
+  border: #e6bb2e 1px solid;
+  box-shadow: #ffd95d 0px 0px 8px;
+  border-radius: 6px;
+  padding: 7px 10px;
+  color: #F1F1F1;
+  font-size: 0.82rem;
+  cursor: pointer;
+  outline: none;
+  color-scheme: dark;
+}
+
+.btn-accion {
+  padding: 7px 14px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-accion.verde {
+  background: rgba(29,158,117,0.15);
+  color: #1D9E75;
+  border: 1px solid rgba(29,158,117,0.3);
+}
+.btn-accion.verde:hover { background: rgba(29,158,117,0.25); }
+
+.btn-accion.rojo {
+  background: rgb(163, 45, 45);
+  color: #e05555;
+  border: 1px solid rgba(163,45,45,0.3);
+}
+.btn-accion.rojo:hover { background: rgba(163,45,45,0.25); }
+
+.btn-accion.gris {
+  background: rgba(255,255,255,0.06);
+  color: rgba(241,241,241,0.5);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.confirm-delete {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: #e05555;
+}
+
+.admin-loading,
+.admin-empty {
+  text-align: center;
+  color: rgba(241,241,241,0.3);
+  padding: 48px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 760px) {
+  .admin-container {
+    padding: 24px 16px;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-header > div {
+    width: 100%;
+  }
+
+  .btn-export {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .metricas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .graficas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .metricas-grid { grid-template-columns: 1fr; }
+  .graficas-grid { grid-template-columns: 1fr; }
+  .filtros-wrap {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .filtro-input,
+  .filtro-select,
+  .filtro-count,
+  .btn-export {
+    width: 100%;
+  }
+  .reserva-cliente { flex-direction: column; gap: 6px; }
+  .reserva-acciones { flex-direction: column; align-items: flex-start; }
+}

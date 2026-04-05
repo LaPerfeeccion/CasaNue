@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './AppBar.css';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
+import { ADMINS } from '../utils/admin';
 
 export default function AppBar() {
   const navigate = useNavigate();
@@ -57,6 +58,9 @@ export default function AppBar() {
         {user ? (
           // Usuario logueado
           <div className="user-info">
+            {ADMINS.includes(user.email) && (
+              <p className="texto-dorado-sombra nav-link" onClick={() => navigate('/admin')}>Admin</p>
+            )}
             <div className="avatar">{initial}</div>
             <span className="texto-dorado-sombra user-name">
               {userName.split(' ')[0]}

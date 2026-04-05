@@ -11,3 +11,27 @@ body{
   font-style: italic;
 }
 
+/* 1. Ancho y alto de la barra */
+::-webkit-scrollbar {
+    width: 9px; /* Ancho en vertical */
+    height: 6px; /* Alto en horizontal */
+}
+
+/* 2. El fondo de la barra (track) */
+::-webkit-scrollbar-track {
+    background: #000000;
+    border-radius: 10px;
+}
+
+/* 3. La parte deslizable (thumb) */
+::-webkit-scrollbar-thumb {
+    background: #F4C55B;
+}
+
+.tittle{
+    font-size: 2.5rem;
+    color: #F4C55B;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 0 0 5px #F4C55B, 0 0 10px #F4C55B, 0 0 20px #F4C55B;
+}

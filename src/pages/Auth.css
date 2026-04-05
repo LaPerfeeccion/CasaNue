@@ -2,7 +2,7 @@
 
 .auth-bg {
   min-height: 100vh;
-  background-color: #30110a;
+  background-color: #000000;
   background-image:
     radial-gradient(ellipse at 20% 50%, rgba(212, 175, 55, 0.06) 0%, transparent 60%),
     radial-gradient(ellipse at 80% 20%, rgba(212, 175, 55, 0.04) 0%, transparent 50%);
@@ -17,16 +17,14 @@
 }
 
 .auth-card {
-  background: rgba(44, 28, 18, 0.85);
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgb(255, 216, 88);
   padding: 48px 40px;
   width: 100%;
   max-width: 440px;
   backdrop-filter: blur(12px);
   box-shadow:
-    0 0 40px rgba(0, 0, 0, 0.5),
-    0 0 80px rgba(212, 175, 55, 0.04);
+    0 0 20px rgb(255, 213, 75);
   animation: fadeUp 0.5s ease forwards;
 }
 
@@ -50,12 +48,12 @@
   background-clip: text;
   color: transparent;
   text-shadow: none;
-  filter: drop-shadow(2px 2px 8px rgba(255, 205, 104, 0.4));
+  filter: drop-shadow(2px 2px 8px rgb(255, 205, 104));
   margin-bottom: 8px;
 }
 
 .auth-subtitle {
-  color: rgba(241, 241, 241, 0.55);
+  color: rgb(219, 183, 82);
   font-size: 0.9rem;
   margin: 0;
 }
@@ -74,7 +72,7 @@
 }
 
 .input-group label {
-  color: rgba(212, 175, 55, 0.8);
+  color: rgb(255, 212, 94);
   font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.05em;
