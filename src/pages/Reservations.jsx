@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase';
 import { useNavigate } from 'react-router-dom';
-import { Alert, CloseButton } from '@heroui/react';
 import AppBar from '../components/AppBar';
 import './Reservations.css';
 import ModalTerminos from '../components/ModalTerminos';
