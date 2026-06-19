@@ -105,6 +105,7 @@ const PLANES = [
 
 // ─── Formulario ───────────────────────────────────────────────────────────────
 function FormularioReserva({ plan, user, onVolver }) {
+  const navigate = useNavigate();
   const [modalVisible, setModalVisible] = useState(false);
   const [aceptaTerminos, setAceptaTerminos] = useState(false);
   const esPersonalizado = plan.id === 'personalizado';
@@ -164,24 +165,31 @@ function FormularioReserva({ plan, user, onVolver }) {
 
     setLoading(true);
 
-    const { error: insertError } = await supabase.from('reservations').insert({
-      client_id: user.id,
-      start_date: form.fecha,
-      end_date: esPersonalizado ? form.fecha_fin : form.fecha,
-      people: totalPersonas,
-      plan: plan.id,
-      ninos_pagantes: ninosPagantes,
-      ninos_gratis: ninosGratis,
-      horas_adicionales: horasExtra,
-      monto,
-      state: 'pendiente'
-    });
+    const { data, error: insertError } = await supabase
+      .from('reservations')
+      .insert({
+        client_id: user.id,
+        start_date: form.fecha,
+        end_date: esPersonalizado ? form.fecha_fin : form.fecha,
+        people: totalPersonas,
+        plan: plan.id,
+        ninos_pagantes: ninosPagantes,
+        ninos_gratis: ninosGratis,
+        horas_adicionales: horasExtra,
+        monto,
+        state: 'pendiente',
+        contrato_aceptado: false
+      })
+      .select()
+      .single();
 
     setLoading(false);
-
     if (insertError) {
-      return setError('Error al crear la reserva.');
+      console.error(insertError);
+      return;
     }
+
+    navigate(`/contrato/${data.id}`);
 
     // 🔥 ENVÍO DE EMAIL CORRECTO
     try {
@@ -395,10 +403,10 @@ function FormularioReserva({ plan, user, onVolver }) {
           📜 Leer Términos y Condiciones
         </button>
         <ModalTerminos
-  isOpen={modalVisible}
-  onClose={() => setModalVisible(false)}
-  onAccept={() => setAceptaTerminos(true)}
-/>
+          isOpen={modalVisible}
+          onClose={() => setModalVisible(false)}
+          onAccept={() => setAceptaTerminos(true)}
+        />
         <button type="submit" className="btn-reservar" disabled={loading || superaLimite || bajoMinimo}>
           {loading ? 'Enviando reserva...' : 'Confirmar reserva'}
         </button>

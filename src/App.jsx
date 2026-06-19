@@ -5,6 +5,8 @@ import Reservations from './pages/Reservations';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Admin from './pages/Admin';
+import { EasyNavigate } from './pages/EasyNavigate';
+import Contrato from './pages/Contrato';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/reservations" element={<Reservations />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/easy-navigate" element={<EasyNavigate />} />
+          <Route path="/contrato/:id" element={<Contrato />}/>
         </Routes>
       </BrowserRouter>
     </>

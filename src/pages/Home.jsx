@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AppBar from '../components/AppBar';
 import './Home.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
   const [showMapModal, setShowMapModal] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === '#map-section') {
+      const section = document.getElementById('map-section');
+      section?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [location]);
 
   const openCategoryModal = (category) => {
     setSelectedCategory(category);
@@ -57,11 +65,11 @@ export default function Home() {
       id: 'exteriores',
       name: 'Zonas Exteriores',
       mainImage: '/media/images/patio.jpg',
-      description: 'Otras Areas',
+      description: 'Otras áreas',
       images: [
         { src: '/media/images/portada.jpeg', title: 'Entrada principal' },
         { src: '/media/images/patio.jpg', title: 'Patio trasero' },
-        { src: '/media/images/jardin.jpg', title: 'Jardin exterior' },
+        { src: '/media/images/jardin.jpg', title: 'Jardín exterior' },
         { src: '/media/images/parking.jpg', title: 'Parqueadero con techo absorbente de sol' }
       ]
     },
@@ -97,7 +105,7 @@ export default function Home() {
       images: [
         { src: '/media/videos/general.mp4', title: 'Vista General' },
         { src: '/media/videos/kios.mp4', title: 'Vista del kiosco' },
-        { src: '/media/videos/video.mp4', title: 'general' }
+        { src: '/media/videos/video.mp4', title: 'General' }
       ]
     },
     {
@@ -164,7 +172,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="map-section">
+        <section id="map-section" className="map-section">
           <div className="map-card">
             <div>
               <h2 className="texto-dorado-sombra">Ubicación de Casa Sanué</h2>
@@ -203,7 +211,7 @@ export default function Home() {
                         autoPlay
                         muted
                         playsInline
-                        // controls  ← quita este atributo si está
+                      // controls  ← quita este atributo si está
                       >
                         <source src={item.src} type="video/mp4" />
                         Tu navegador no soporta el elemento de video.

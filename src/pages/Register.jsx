@@ -6,7 +6,7 @@ import './Auth.css';
 
 export default function Register() {
   const navigate = useNavigate();
-  const [form, setForm] = useState({ name: '', email: '', whatsapp: '', password: '' });
+  const [form, setForm] = useState({ name: '', cedula: '', email: '', whatsapp: '', password: '' });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -25,6 +25,7 @@ export default function Register() {
       options: {
         data: {
           name: form.name,
+          cedula: form.cedula,
           whatsapp: form.whatsapp,
         },
       },
@@ -38,16 +39,23 @@ export default function Register() {
 
     // Guardar en tabla clients
     if (data.user) {
-      await supabase.from('clients').insert({
-        id: data.user.id,
-        name: form.name,
-        whatsapp: form.whatsapp,
-        email: form.email,
-      });
-    }
+      const { error: insertError } = await supabase
+        .from('clients')
+        .upsert({
+          id: data.user.id,
+          name: form.name,
+          cedula: form.cedula,
+          whatsApp: form.whatsapp,
+          email: form.email,
+        });
 
-    setLoading(false);
-    navigate('/');
+      if (insertError) {
+        console.error(insertError);
+      }
+
+      setLoading(false);
+      navigate('/');
+    }
   };
 
   return (
@@ -57,7 +65,7 @@ export default function Register() {
         <div className="auth-card">
           <div className="auth-header">
             <h2 className="auth-title">Crear cuenta</h2>
-            <p className="auth-subtitle">Únete y reserva tu estadía en Casa Sanue</p>
+            <p className="auth-subtitle">Únete y reserva tu estadía en Casa Sanué</p>
           </div>
 
           <form onSubmit={handleRegister} className="auth-form">
@@ -68,6 +76,18 @@ export default function Register() {
                 name="name"
                 placeholder="María López"
                 value={form.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="input-group">
+              <label>Cédula</label>
+              <input
+                type="text"
+                name="cedula"
+                placeholder="123456789"
+                value={form.cedula}
                 onChange={handleChange}
                 required
               />

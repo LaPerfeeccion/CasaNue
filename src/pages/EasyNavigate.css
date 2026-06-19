@@ -1,0 +1,146 @@
+.EN_body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffd04e;
+    padding: 1rem;
+}
+.selection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    height: auto;
+    padding: 2rem;
+}
+.tys{
+    text-align: center;
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    margin: 0;
+}
+.tysTittle{
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    background-color: #f6c338;
+    border-radius: 8px;
+    font-size: 2rem;
+    margin: 0;
+}
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.iconvs{
+    text-align: justify;
+    font-size: 3rem;
+    width: 100%;
+    height: auto;
+}
+
+.icon34{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 320px;
+    padding: 2rem;
+    gap: 1rem;
+    background-color: #ffc13a;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon34:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .EN_body {
+        min-height: auto;
+        padding: 1.5rem;
+    }
+    
+    .selection {
+        gap: 1.5rem;
+    }
+    
+    .tys {
+        font-size: 1rem;
+    }
+    .tysTittle{
+        font-size: 1.5rem;
+    }
+    .top, .bottom {
+        gap: 1.5rem;
+    }
+    
+    .iconvs {
+        font-size: 2.5rem;
+    }
+    
+    .icon34 {
+        width: 160px;
+        height: 260px;
+        padding: 1.5rem;
+        gap: 0.8rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .EN_body {
+        min-height: 100vh;
+        padding: 1rem;
+    }
+    
+    .selection {
+        gap: 1rem;
+    }
+    
+    .tys {
+        font-size: 0.9rem;
+    }
+    .tysTittle{
+        font-size: 1.2rem;
+    }
+    
+    .top, .bottom {
+        gap: 1rem;
+        flex-direction: row;
+    }
+    
+    .iconvs {
+        font-size: 2rem;
+    }
+    
+    .icon34 {
+        width: 140px;
+        height: 200px;
+        padding: 1rem;
+        gap: 0.6rem;
+    }
+}

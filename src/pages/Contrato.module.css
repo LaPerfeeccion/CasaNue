@@ -1,0 +1,66 @@
+/* Contrato.module.css */
+.contratoContainer {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border: 2px solid #c5a059; /* Dorado */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  color: #1a1a1a; /* Negro */
+}
+
+.contratoContainer h1 {
+  text-align: center;
+  color: #c5a059;
+  border-bottom: 2px solid #c5a059;
+}
+
+.datosCliente {
+  background-color: #fcfcfc;
+  padding: 15px;
+  border-left: 4px solid #f4d03f; /* Amarillo */
+  margin-bottom: 25px;
+}
+
+.contratoTexto {
+  line-height: 1.6;
+}
+
+.firmaBox {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.inputFirma {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.checkContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btnFirmar {
+  width: 100%;
+  padding: 15px;
+  background-color: #1a1a1a;
+  color: #c5a059;
+  border: 2px solid #c5a059;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnFirmar:hover:not(:disabled) {
+  background-color: #c5a059;
+  color: #1a1a1a;
+}
