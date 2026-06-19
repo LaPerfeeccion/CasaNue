@@ -42,6 +42,10 @@ export default function AppBar() {
   // Primera letra del nombre para el avatar
   const initial = userName ? userName.charAt(0).toUpperCase() : '?';
 
+  const navegad = async () => {
+    navigate('/easy-navigate');
+  };
+
   return (
     <div className="app-bar">
       <div className="left" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>

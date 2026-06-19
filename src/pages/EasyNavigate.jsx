@@ -5,7 +5,7 @@ import { FaMapMarkedAlt } from 'react-icons/fa';
 import { SiSocialblade } from 'react-icons/si';
 import { useNavigate } from 'react-router-dom';
 
-export const EasyNavigate = () => {
+export default function EasyNavigate() {
     const navigate = useNavigate();
 
     const navigateToMapSection = () => {

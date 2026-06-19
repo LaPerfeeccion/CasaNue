@@ -5,7 +5,7 @@ import Reservations from './pages/Reservations';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Admin from './pages/Admin';
-import { EasyNavigate } from './pages/EasyNavigate';
+import EasyNavigate from './pages/EasyNavigate';
 import Contrato from './pages/Contrato';
 
 function App() {
