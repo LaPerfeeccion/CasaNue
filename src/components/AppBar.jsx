@@ -58,6 +58,9 @@ export default function AppBar() {
       <div className="right">
         <p className="texto-dorado-sombra nav-link" onClick={() => navigate('/')}>Home</p>
         <p className="texto-dorado-sombra nav-link">About</p>
+        <button onClick={() => navigate('/easy-navigate')}>
+          ⚡
+        </button>
 
         {user ? (
           // Usuario logueado
